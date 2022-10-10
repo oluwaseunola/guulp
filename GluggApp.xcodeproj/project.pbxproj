@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2930EDCD28EF61EC00A84614 /* GluggAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EDCC28EF61EC00A84614 /* GluggAppApp.swift */; };
+		2930EDCF28EF61EC00A84614 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EDCE28EF61EC00A84614 /* HomeView.swift */; };
+		2930EDD128EF61F000A84614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930EDD028EF61F000A84614 /* Assets.xcassets */; };
+		2930EDD428EF61F000A84614 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930EDD328EF61F000A84614 /* Preview Assets.xcassets */; };
+		2930EDD628EF61F000A84614 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EDD528EF61F000A84614 /* Persistence.swift */; };
+		2930EDD928EF61F000A84614 /* GluggApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2930EDD728EF61F000A84614 /* GluggApp.xcdatamodeld */; };
+		2930EDE328EF61F000A84614 /* GluggAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EDE228EF61F000A84614 /* GluggAppTests.swift */; };
+		2930EDED28EF61F000A84614 /* GluggAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EDEC28EF61F000A84614 /* GluggAppUITests.swift */; };
+		2930EDEF28EF61F000A84614 /* GluggAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EDEE28EF61F000A84614 /* GluggAppUITestsLaunchTests.swift */; };
+		2930EDFD28EF652D00A84614 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EDFC28EF652D00A84614 /* OnboardingView.swift */; };
+		2930EDFF28F082DC00A84614 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2930EDFE28F082DB00A84614 /* Launch Screen.storyboard */; };
+		2930EE0228F0861F00A84614 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EE0128F0861F00A84614 /* Constants.swift */; };
+		2930EE0528F08C7D00A84614 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EE0428F08C7D00A84614 /* User.swift */; };
+		298B45F128F3498600221BF9 /* WaterCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298B45F028F3498600221BF9 /* WaterCompletionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2930EDDF28EF61F000A84614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2930EDC128EF61EC00A84614 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2930EDC828EF61EC00A84614;
+			remoteInfo = GluggApp;
+		};
+		2930EDE928EF61F000A84614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2930EDC128EF61EC00A84614 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2930EDC828EF61EC00A84614;
+			remoteInfo = GluggApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2930EDC928EF61EC00A84614 /* GluggApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GluggApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2930EDCC28EF61EC00A84614 /* GluggAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GluggAppApp.swift; sourceTree = "<group>"; };
+		2930EDCE28EF61EC00A84614 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2930EDD028EF61F000A84614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2930EDD328EF61F000A84614 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2930EDD528EF61F000A84614 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2930EDD828EF61F000A84614 /* GluggApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GluggApp.xcdatamodel; sourceTree = "<group>"; };
+		2930EDDE28EF61F000A84614 /* GluggAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GluggAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2930EDE228EF61F000A84614 /* GluggAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GluggAppTests.swift; sourceTree = "<group>"; };
+		2930EDE828EF61F000A84614 /* GluggAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GluggAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2930EDEC28EF61F000A84614 /* GluggAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GluggAppUITests.swift; sourceTree = "<group>"; };
+		2930EDEE28EF61F000A84614 /* GluggAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GluggAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2930EDFC28EF652D00A84614 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		2930EDFE28F082DB00A84614 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		2930EE0128F0861F00A84614 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2930EE0428F08C7D00A84614 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		298B45F028F3498600221BF9 /* WaterCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCompletionView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2930EDC628EF61EC00A84614 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2930EDDB28EF61F000A84614 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2930EDE528EF61F000A84614 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2930EDC028EF61EC00A84614 = {
+			isa = PBXGroup;
+			children = (
+				2930EDCB28EF61EC00A84614 /* GluggApp */,
+				2930EDE128EF61F000A84614 /* GluggAppTests */,
+				2930EDEB28EF61F000A84614 /* GluggAppUITests */,
+				2930EDCA28EF61EC00A84614 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2930EDCA28EF61EC00A84614 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2930EDC928EF61EC00A84614 /* GluggApp.app */,
+				2930EDDE28EF61F000A84614 /* GluggAppTests.xctest */,
+				2930EDE828EF61F000A84614 /* GluggAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2930EDCB28EF61EC00A84614 /* GluggApp */ = {
+			isa = PBXGroup;
+			children = (
+				2930EE0028F0861000A84614 /* Resources */,
+				2930EDCC28EF61EC00A84614 /* GluggAppApp.swift */,
+				2930EE0328F08C6000A84614 /* Models */,
+				2930EDFE28F082DB00A84614 /* Launch Screen.storyboard */,
+				2930EDFB28EF620000A84614 /* Views */,
+				2930EDD028EF61F000A84614 /* Assets.xcassets */,
+				2930EDD528EF61F000A84614 /* Persistence.swift */,
+				2930EDD728EF61F000A84614 /* GluggApp.xcdatamodeld */,
+				2930EDD228EF61F000A84614 /* Preview Content */,
+			);
+			path = GluggApp;
+			sourceTree = "<group>";
+		};
+		2930EDD228EF61F000A84614 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2930EDD328EF61F000A84614 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2930EDE128EF61F000A84614 /* GluggAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2930EDE228EF61F000A84614 /* GluggAppTests.swift */,
+			);
+			path = GluggAppTests;
+			sourceTree = "<group>";
+		};
+		2930EDEB28EF61F000A84614 /* GluggAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2930EDEC28EF61F000A84614 /* GluggAppUITests.swift */,
+				2930EDEE28EF61F000A84614 /* GluggAppUITestsLaunchTests.swift */,
+			);
+			path = GluggAppUITests;
+			sourceTree = "<group>";
+		};
+		2930EDFB28EF620000A84614 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2930EDCE28EF61EC00A84614 /* HomeView.swift */,
+				2930EDFC28EF652D00A84614 /* OnboardingView.swift */,
+				298B45F028F3498600221BF9 /* WaterCompletionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2930EE0028F0861000A84614 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2930EE0128F0861F00A84614 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2930EE0328F08C6000A84614 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2930EE0428F08C7D00A84614 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2930EDC828EF61EC00A84614 /* GluggApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2930EDF228EF61F000A84614 /* Build configuration list for PBXNativeTarget "GluggApp" */;
+			buildPhases = (
+				2930EDC528EF61EC00A84614 /* Sources */,
+				2930EDC628EF61EC00A84614 /* Frameworks */,
+				2930EDC728EF61EC00A84614 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GluggApp;
+			productName = GluggApp;
+			productReference = 2930EDC928EF61EC00A84614 /* GluggApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2930EDDD28EF61F000A84614 /* GluggAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2930EDF528EF61F000A84614 /* Build configuration list for PBXNativeTarget "GluggAppTests" */;
+			buildPhases = (
+				2930EDDA28EF61F000A84614 /* Sources */,
+				2930EDDB28EF61F000A84614 /* Frameworks */,
+				2930EDDC28EF61F000A84614 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2930EDE028EF61F000A84614 /* PBXTargetDependency */,
+			);
+			name = GluggAppTests;
+			productName = GluggAppTests;
+			productReference = 2930EDDE28EF61F000A84614 /* GluggAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2930EDE728EF61F000A84614 /* GluggAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2930EDF828EF61F000A84614 /* Build configuration list for PBXNativeTarget "GluggAppUITests" */;
+			buildPhases = (
+				2930EDE428EF61F000A84614 /* Sources */,
+				2930EDE528EF61F000A84614 /* Frameworks */,
+				2930EDE628EF61F000A84614 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2930EDEA28EF61F000A84614 /* PBXTargetDependency */,
+			);
+			name = GluggAppUITests;
+			productName = GluggAppUITests;
+			productReference = 2930EDE828EF61F000A84614 /* GluggAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2930EDC128EF61EC00A84614 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					2930EDC828EF61EC00A84614 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					2930EDDD28EF61F000A84614 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 2930EDC828EF61EC00A84614;
+					};
+					2930EDE728EF61F000A84614 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 2930EDC828EF61EC00A84614;
+					};
+				};
+			};
+			buildConfigurationList = 2930EDC428EF61EC00A84614 /* Build configuration list for PBXProject "GluggApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2930EDC028EF61EC00A84614;
+			productRefGroup = 2930EDCA28EF61EC00A84614 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2930EDC828EF61EC00A84614 /* GluggApp */,
+				2930EDDD28EF61F000A84614 /* GluggAppTests */,
+				2930EDE728EF61F000A84614 /* GluggAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2930EDC728EF61EC00A84614 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2930EDFF28F082DC00A84614 /* Launch Screen.storyboard in Resources */,
+				2930EDD428EF61F000A84614 /* Preview Assets.xcassets in Resources */,
+				2930EDD128EF61F000A84614 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2930EDDC28EF61F000A84614 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2930EDE628EF61F000A84614 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2930EDC528EF61EC00A84614 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2930EDD928EF61F000A84614 /* GluggApp.xcdatamodeld in Sources */,
+				2930EDD628EF61F000A84614 /* Persistence.swift in Sources */,
+				2930EDCF28EF61EC00A84614 /* HomeView.swift in Sources */,
+				2930EDFD28EF652D00A84614 /* OnboardingView.swift in Sources */,
+				298B45F128F3498600221BF9 /* WaterCompletionView.swift in Sources */,
+				2930EDCD28EF61EC00A84614 /* GluggAppApp.swift in Sources */,
+				2930EE0228F0861F00A84614 /* Constants.swift in Sources */,
+				2930EE0528F08C7D00A84614 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2930EDDA28EF61F000A84614 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2930EDE328EF61F000A84614 /* GluggAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2930EDE428EF61F000A84614 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2930EDEF28EF61F000A84614 /* GluggAppUITestsLaunchTests.swift in Sources */,
+				2930EDED28EF61F000A84614 /* GluggAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2930EDE028EF61F000A84614 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2930EDC828EF61EC00A84614 /* GluggApp */;
+			targetProxy = 2930EDDF28EF61F000A84614 /* PBXContainerItemProxy */;
+		};
+		2930EDEA28EF61F000A84614 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2930EDC828EF61EC00A84614 /* GluggApp */;
+			targetProxy = 2930EDE928EF61F000A84614 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2930EDF028EF61F000A84614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2930EDF128EF61F000A84614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2930EDF328EF61F000A84614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GluggApp/Preview Content\"";
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.GluggApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2930EDF428EF61F000A84614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GluggApp/Preview Content\"";
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.GluggApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2930EDF628EF61F000A84614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.GluggAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GluggApp.app/GluggApp";
+			};
+			name = Debug;
+		};
+		2930EDF728EF61F000A84614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.GluggAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GluggApp.app/GluggApp";
+			};
+			name = Release;
+		};
+		2930EDF928EF61F000A84614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.GluggAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GluggApp;
+			};
+			name = Debug;
+		};
+		2930EDFA28EF61F000A84614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QTC9TXRFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.llamastudios.GluggAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GluggApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2930EDC428EF61EC00A84614 /* Build configuration list for PBXProject "GluggApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2930EDF028EF61F000A84614 /* Debug */,
+				2930EDF128EF61F000A84614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2930EDF228EF61F000A84614 /* Build configuration list for PBXNativeTarget "GluggApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2930EDF328EF61F000A84614 /* Debug */,
+				2930EDF428EF61F000A84614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2930EDF528EF61F000A84614 /* Build configuration list for PBXNativeTarget "GluggAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2930EDF628EF61F000A84614 /* Debug */,
+				2930EDF728EF61F000A84614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2930EDF828EF61F000A84614 /* Build configuration list for PBXNativeTarget "GluggAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2930EDF928EF61F000A84614 /* Debug */,
+				2930EDFA28EF61F000A84614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2930EDD728EF61F000A84614 /* GluggApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2930EDD828EF61F000A84614 /* GluggApp.xcdatamodel */,
+			);
+			currentVersion = 2930EDD828EF61F000A84614 /* GluggApp.xcdatamodel */;
+			path = GluggApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2930EDC128EF61EC00A84614 /* Project object */;
+}
