@@ -11,4 +11,6 @@ class Constants{
     
     static let onboardKey = "onboard"
     static let currentUser = "currentUser"
+    static let streak = "streak"
+    static let currentDay = "currentDay"
 }

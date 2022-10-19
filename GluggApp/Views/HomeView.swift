@@ -9,25 +9,24 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
+
     @Environment(\.managedObjectContext) private var viewContext
-    private var isOnboarded : Bool {
-        let isOnboarded = UserDefaults.standard.bool(forKey: Constants.onboardKey)
-        
-        return isOnboarded
-    }
+    @State private var isOnboarded = false
     
     @State private var waterProgress : CGFloat = 0
-    
+    @State private var timeleft = ""
+    @State private var streak = UserDefaults.standard.integer(forKey: Constants.streak)
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \WaterEntry.date, ascending: false)],
         animation: .default) private var items: FetchedResults<WaterEntry>
     
     var body: some View {
-        
-        //        if !isOnboarded {
-        //            OnboardingView()
-        //        } else {
+        ZStack{
+                if !isOnboarded {
+                    OnboardingView(isOnboarded: $isOnboarded)
+                } else {
         
         
         GeometryReader{ proxy in
@@ -35,16 +34,35 @@ struct HomeView: View {
             
             VStack{
                 
-                Text("Hey there, Seun.").font(.system(.largeTitle, design: .rounded)).bold().frame(maxWidth:.infinity,alignment: .leading).padding(.leading)
+                let user = getUser()
+                let name = user.name.components(separatedBy: .whitespaces).first
+            
+                VStack(alignment:.leading,spacing: 5){
+                    Text("Hey there, \(name ?? "").").font(.system(.largeTitle, design: .rounded)).bold().frame(maxWidth:.infinity,alignment: .leading)
+                    
+                    Label {
+                        Text("Streak: \(streak) days")
+                    } icon: {
+                        Text("🔥")
+                    }
+                    
+                    Label {
+                        Text(timeleft)
+                    } icon: {
+                        Text("⏰")
+                    }
+                    
+                }.padding(.horizontal)
                 
                 WaterCompletionView(progress: $waterProgress).cornerRadius(30).padding().frame(height:proxy.size.height/2)
                     .overlay(alignment:.bottomTrailing){
                         
                         Button {
                             
-                            addItem()
-                            waterProgress = CGFloat(items.count)/CGFloat(8)
-                            
+                            if items.count < 8{
+                                addItem()
+                                waterProgress = CGFloat(items.count)/CGFloat(8)
+                            }
                             
                         } label: {
                             Image(systemName: "plus").resizable().aspectRatio(contentMode: .fit).foregroundColor(.white)
@@ -53,7 +71,7 @@ struct HomeView: View {
                         
                     }
                     .overlay(alignment:.topTrailing) {
-                        Text("\(items.count) Cups Drank").font(.system(.title3, design: .rounded)).bold().foregroundColor(.white)
+                        Text("\(items.count) \(items.count == 1 ? "Cup" : "Cups") Drank").font(.system(.title3, design: .rounded)).bold().foregroundColor(.white)
                             .offset(x: -40, y: 30)
                     }
                 
@@ -90,10 +108,19 @@ struct HomeView: View {
                 Spacer()
             }}.onAppear {
                 waterProgress = CGFloat(items.count)/CGFloat(8)
+                setHours()
+                checkDate()
+                
+                
+            }
+            .onReceive(timer) { _ in
+               setHours()
             }
         
-        //        }
-        
+                }
+        }.onAppear {
+            isOnboarded = UserDefaults.standard.bool(forKey: Constants.onboardKey)
+        }
         
     }
     
@@ -131,6 +158,64 @@ struct HomeView: View {
             waterProgress = CGFloat(items.count)/CGFloat(8)
         }
     }
+    
+    private func setHours(){
+        let calendar = Calendar.autoupdatingCurrent
+        let currentHour = calendar.component(.hour, from: Date())
+
+        timeleft = "\(24-currentHour) hours left"
+
+    }
+    
+    private func setStreak(){
+        
+            if items.count == 8{
+                var streak = UserDefaults.standard.integer(forKey: Constants.streak)
+                
+                streak += 1
+                
+                self.streak = streak
+                
+                UserDefaults.standard.set(streak, forKey: Constants.streak)
+            }else{
+                UserDefaults.standard.set(0, forKey: Constants.streak)
+            }
+            
+            let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "WaterEntry")
+            let delteReq = NSBatchDeleteRequest(fetchRequest: fetchReq)
+            
+            do {
+                try viewContext.execute(delteReq)
+                try viewContext.save()
+    
+            }catch{
+                
+            }
+            
+        }
+    
+    private func checkDate(){
+        
+        let previousDay = UserDefaults.standard.integer(forKey: Constants.currentDay)
+
+        let calendar = Calendar.autoupdatingCurrent
+        let day = calendar.component(.day, from: Date())
+        
+        if day > previousDay {
+            setStreak()
+            UserDefaults.standard.set(day, forKey: Constants.currentDay)
+        }
+        
+        
+    }
+    
+    private func getUser() -> User{
+        if let data = UserDefaults.standard.object(forKey: Constants.currentUser) as? Data, let user = try? JSONDecoder().decode(User.self, from: data) {
+            return user
+        }
+        return User(name: "", goal: 0)
+    }
+    
 }
 
 private let itemFormatter: DateFormatter = {

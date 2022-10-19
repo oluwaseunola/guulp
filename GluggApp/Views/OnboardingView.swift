@@ -11,6 +11,7 @@ struct OnboardingView: View {
     @State private var name = ""
     @State private var goal = ""
     @State var presentAlert = false
+    @Binding var isOnboarded : Bool
     var body: some View {
         
        GeometryReader{ proxy in
@@ -64,10 +65,14 @@ struct OnboardingView: View {
     }
     
     private func setUser(){
+        
         guard let goal = Int(goal) else {return}
         let currentUser = User(name: name, goal: goal)
-        UserDefaults.standard.set(currentUser, forKey: Constants.currentUser)
-        UserDefaults.standard.set(true, forKey: Constants.onboardKey)
+        if let encoded = try? JSONEncoder().encode(currentUser){
+            UserDefaults.standard.set(encoded, forKey: Constants.currentUser)
+            UserDefaults.standard.set(true, forKey: Constants.onboardKey)
+        }
+       
         
     }
     
@@ -80,12 +85,17 @@ struct OnboardingView: View {
 
          else{
             setUser()
+             
+             withAnimation{
+                 isOnboarded = true
+             }
+            
         }
     }
 }
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView(isOnboarded: .constant(true))
     }
 }
