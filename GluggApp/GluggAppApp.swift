@@ -7,13 +7,14 @@
 
 import SwiftUI
 
+
 @main
 struct GluggAppApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeView(viewModel: HomeViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

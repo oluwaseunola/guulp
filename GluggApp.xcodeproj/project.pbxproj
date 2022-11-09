@@ -21,6 +21,11 @@
 		2930EE0228F0861F00A84614 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EE0128F0861F00A84614 /* Constants.swift */; };
 		2930EE0528F08C7D00A84614 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2930EE0428F08C7D00A84614 /* User.swift */; };
 		298B45F128F3498600221BF9 /* WaterCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298B45F028F3498600221BF9 /* WaterCompletionView.swift */; };
+		29BCD6EB291AEB5700D9AF4A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCD6EA291AEB5600D9AF4A /* HomeViewModel.swift */; };
+		29BCD6EE291AED4B00D9AF4A /* HomeViewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCD6ED291AED4B00D9AF4A /* HomeViewRepository.swift */; };
+		29BCD6F1291C310600D9AF4A /* WaterWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCD6F0291C310600D9AF4A /* WaterWaveView.swift */; };
+		29BCD6F3291C315400D9AF4A /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCD6F2291C315400D9AF4A /* OnboardingViewModel.swift */; };
+		29BCD6F5291C4CFB00D9AF4A /* WaterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCD6F4291C4CFB00D9AF4A /* WaterCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 		2930EE0128F0861F00A84614 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2930EE0428F08C7D00A84614 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		298B45F028F3498600221BF9 /* WaterCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCompletionView.swift; sourceTree = "<group>"; };
+		29BCD6EA291AEB5600D9AF4A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		29BCD6ED291AED4B00D9AF4A /* HomeViewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRepository.swift; sourceTree = "<group>"; };
+		29BCD6F0291C310600D9AF4A /* WaterWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWaveView.swift; sourceTree = "<group>"; };
+		29BCD6F2291C315400D9AF4A /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		29BCD6F4291C4CFB00D9AF4A /* WaterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		292DF8CD29007BE30085D007 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				29BCD6EA291AEB5600D9AF4A /* HomeViewModel.swift */,
+				29BCD6F2291C315400D9AF4A /* OnboardingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		2930EDC028EF61EC00A84614 = {
 			isa = PBXGroup;
 			children = (
@@ -108,11 +127,13 @@
 		2930EDCB28EF61EC00A84614 /* GluggApp */ = {
 			isa = PBXGroup;
 			children = (
-				2930EE0028F0861000A84614 /* Resources */,
 				2930EDCC28EF61EC00A84614 /* GluggAppApp.swift */,
+				29BCD6EC291AED1A00D9AF4A /* Repository */,
+				2930EE0028F0861000A84614 /* Resources */,
 				2930EE0328F08C6000A84614 /* Models */,
 				2930EDFE28F082DB00A84614 /* Launch Screen.storyboard */,
 				2930EDFB28EF620000A84614 /* Views */,
+				292DF8CD29007BE30085D007 /* ViewModels */,
 				2930EDD028EF61F000A84614 /* Assets.xcassets */,
 				2930EDD528EF61F000A84614 /* Persistence.swift */,
 				2930EDD728EF61F000A84614 /* GluggApp.xcdatamodeld */,
@@ -152,6 +173,7 @@
 				2930EDCE28EF61EC00A84614 /* HomeView.swift */,
 				2930EDFC28EF652D00A84614 /* OnboardingView.swift */,
 				298B45F028F3498600221BF9 /* WaterCompletionView.swift */,
+				29BCD6EF291C30E500D9AF4A /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +192,23 @@
 				2930EE0428F08C7D00A84614 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		29BCD6EC291AED1A00D9AF4A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				29BCD6ED291AED4B00D9AF4A /* HomeViewRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		29BCD6EF291C30E500D9AF4A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				29BCD6F0291C310600D9AF4A /* WaterWaveView.swift */,
+				29BCD6F4291C4CFB00D9AF4A /* WaterCellView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,9 +343,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2930EDD928EF61F000A84614 /* GluggApp.xcdatamodeld in Sources */,
+				29BCD6EB291AEB5700D9AF4A /* HomeViewModel.swift in Sources */,
 				2930EDD628EF61F000A84614 /* Persistence.swift in Sources */,
+				29BCD6EE291AED4B00D9AF4A /* HomeViewRepository.swift in Sources */,
 				2930EDCF28EF61EC00A84614 /* HomeView.swift in Sources */,
+				29BCD6F1291C310600D9AF4A /* WaterWaveView.swift in Sources */,
+				29BCD6F5291C4CFB00D9AF4A /* WaterCellView.swift in Sources */,
 				2930EDFD28EF652D00A84614 /* OnboardingView.swift in Sources */,
+				29BCD6F3291C315400D9AF4A /* OnboardingViewModel.swift in Sources */,
 				298B45F128F3498600221BF9 /* WaterCompletionView.swift in Sources */,
 				2930EDCD28EF61EC00A84614 /* GluggAppApp.swift in Sources */,
 				2930EE0228F0861F00A84614 /* Constants.swift in Sources */,
@@ -475,6 +519,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -504,6 +549,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
